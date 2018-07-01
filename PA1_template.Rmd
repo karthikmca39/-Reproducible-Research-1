@@ -1,931 +1,215 @@
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
-  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
-  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
-  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
-
-
-
-  <link crossorigin="anonymous" media="all" integrity="sha512-pCRDtdb3GlUU48h+oRJVA8f0GddrLnU97wB7mHQ7q6c40vMbMMZsFdk0IMhkUFRqw1M/y4EkWxtaKwfeFezOkQ==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-73f533b7cc08a9d040e601cfd38fa585.css" />
-  <link crossorigin="anonymous" media="all" integrity="sha512-pscKt6TONS3P9zPqdDjngC5prTq2tL4UT8MfWSiqhftwRK8aipsxEuebGlIpobamrDHDV//uvSMkcPXLduUrWw==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-a0a727fb61e0eacfb1f33d2f365272f8.css" />
-  
-  
-  
-  
-
-  <meta name="viewport" content="width=device-width">
-  
-  <title>reproducible_research/PA1_template.Rmd at master · semdogan/reproducible_research</title>
-    <meta name="description" content="GitHub is where people build software. More than 28 million people use GitHub to discover, fork, and contribute to over 85 million projects.">
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
-  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
-  <meta property="fb:app_id" content="1401488693436528">
-
-    
-    <meta property="og:image" content="https://avatars1.githubusercontent.com/u/8332348?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="semdogan/reproducible_research" /><meta property="og:url" content="https://github.com/semdogan/reproducible_research" /><meta property="og:description" content="Contribute to reproducible_research development by creating an account on GitHub." />
-
-  <link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6Mjg5NTg5MzQ3OmZhOWU0NzZjYzZiNTcyMTdiOGQxZDgxM2JiZTk3OWE1YzNiNjg1NGYwZjBhMzQ5MmNhYWU1YmFlOTRlNGNjMzU=--55021ae639b524cb4ff8a44d0a6796d20499e14d">
-  <meta name="pjax-timeout" content="1000">
-  <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="F4F1:4446:122C1CB:203212D:5B388E94" data-pjax-transient>
-
-
-  
-
-  <meta name="selected-link" value="repo_source" data-pjax-transient>
-
-    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
-  <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
-  <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
-    <meta name="google-analytics" content="UA-3769691-2">
-
-<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="F4F1:4446:122C1CB:203212D:5B388E94" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="7225430" /><meta name="octolytics-actor-login" content="karthikmca39" /><meta name="octolytics-actor-hash" content="95788331137100df214f7d6ae398f94fa57e63bc3954a3b1ccf7e7a11240ea7f" />
-<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
-
-
-
-
-<meta class="js-ga-set" name="dimension1" content="Logged In">
-
-
-  
-
-      <meta name="hostname" content="github.com">
-    <meta name="user-login" content="karthikmca39">
-
-      <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="NzIzMTQ0ODM1MzU5ZWI2NzIzZDk0NmMyZTA5NDUzNWM3YTZjY2QzZjNiODdhNjZmNTljMGVlMTUzMGJmZmFkMXx7InJlbW90ZV9hZGRyZXNzIjoiNjQuNjIuMTk3LjUyIiwicmVxdWVzdF9pZCI6IkY0RjE6NDQ0NjoxMjJDMUNCOjIwMzIxMkQ6NUIzODhFOTQiLCJ0aW1lc3RhbXAiOjE1MzA0MzMxOTksImhvc3QiOiJnaXRodWIuY29tIn0=">
-
-    <meta name="enabled-features" content="UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_SEARCH,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES">
-
-  <meta name="html-safe-nonce" content="0a5a6217d8c626e2fdd7353854fa236ff4124294">
-
-  <meta http-equiv="x-pjax-version" content="28e6687e0aef26fe64025c1be61f33a7">
-  
-
-      <link href="https://github.com/semdogan/reproducible_research/commits/master.atom" rel="alternate" title="Recent Commits to reproducible_research:master" type="application/atom+xml">
-
-  <meta name="description" content="Contribute to reproducible_research development by creating an account on GitHub.">
-  <meta name="go-import" content="github.com/semdogan/reproducible_research git https://github.com/semdogan/reproducible_research.git">
-
-  <meta name="octolytics-dimension-user_id" content="8332348" /><meta name="octolytics-dimension-user_login" content="semdogan" /><meta name="octolytics-dimension-repository_id" content="139239045" /><meta name="octolytics-dimension-repository_nwo" content="semdogan/reproducible_research" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="139239045" /><meta name="octolytics-dimension-repository_network_root_nwo" content="semdogan/reproducible_research" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
-
-
-    <link rel="canonical" href="https://github.com/semdogan/reproducible_research/blob/master/PA1_template.Rmd" data-pjax-transient>
-
-
-  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
-
-  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
-
-  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
-  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
-
-<meta name="theme-color" content="#1e2327">
-
-
-  <meta name="u2f-support" content="true">
-
-<link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
-
-  </head>
-
-  <body class="logged-in env-production page-blob">
-    
-
-  <div class="position-relative js-header-wrapper ">
-    <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
-    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
-
-    
-    
-    
-
-
-
-        
-<header class="Header  f5" role="banner">
-  <div class="d-flex flex-justify-between px-3 container-lg">
-    <div class="d-flex flex-justify-between ">
-      <div class="">
-        <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
-  <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-</a>
-
-      </div>
-
-    </div>
-
-    <div class="HeaderMenu d-flex flex-justify-between flex-auto">
-      <div class="d-flex">
-            <div class="">
-              <div class="header-search scoped-search site-scoped-search js-site-search position-relative js-jump-to"
-  role="search combobox"
-  aria-owns="jump-to-results"
-  aria-label="Search or jump to"
-  aria-haspopup="listbox"
-  aria-expanded="true"
->
-  <div class="position-relative">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" data-scope-type="Repository" data-scope-id="139239045" data-scoped-search-url="/semdogan/reproducible_research/search" data-unscoped-search-url="/search" action="/semdogan/reproducible_research/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-      <label class="form-control header-search-wrapper header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
-        <input type="text"
-          class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
-          data-hotkey="s,/"
-          name="q"
-          value=""
-          placeholder="Search or jump to…"
-          data-unscoped-placeholder="Search or jump to…"
-          data-scoped-placeholder="Search or jump to…"
-          autocapitalize="off"
-          aria-autocomplete="list"
-          aria-controls="jump-to-results"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=MpWwI7MpHtKhEXY/Tm2meUfEMvZ/+DCuKHvA7oCcGx/NHH9Xod7YSP0NE1Vl9eze6jqn1SxJ+3qHEk0wjoZVPg=="
-          spellcheck="false"
-          autocomplete="off"
-          >
-          <input type="hidden" class="js-site-search-type-field" name="type" >
-            <img src="https://assets-cdn.github.com/images/search-shortcut-hint.svg" alt="" class="mr-2 header-search-key-slash">
-
-            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
-              <ul class="d-none js-jump-to-suggestions-template-container">
-                <li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item">
-                  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center p-2 jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open" href="">
-                    <div class="jump-to-octicon js-jump-to-octicon mr-2 text-center d-none"></div>
-                    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar" alt="" aria-label="Team" src="" width="28" height="28">
-
-                    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden no-wrap css-truncate css-truncate-target">
-                    </div>
-
-                    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
-                      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
-                        In this repository
-                      </span>
-                      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
-                        All GitHub
-                      </span>
-                      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
-                    </div>
-
-                    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
-                      Jump to
-                      <span class="d-inline-block ml-1 v-align-middle">↵</span>
-                    </div>
-                  </a>
-                </li>
-                <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-repo-octicon-template" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
-                <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-project-octicon-template" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
-                <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-search-octicon-template" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
-              </ul>
-              <ul class="d-none js-jump-to-no-results-template-container">
-                <li class="d-flex flex-justify-center flex-items-center p-3 f5 d-none">
-                  <span class="text-gray">No suggested jump to results</span>
-                </li>
-              </ul>
-
-              <ul id="jump-to-results" class="js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container" >
-                <li class="d-flex flex-justify-center flex-items-center p-0 f5">
-                  <img src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" alt="Octocat Spinner Icon" class="m-2" width="28">
-                </li>
-              </ul>
-            </div>
-      </label>
-</form>  </div>
-</div>
-
-            </div>
-
-          <ul class="d-flex pl-2 flex-items-center text-bold list-style-none" role="navigation">
-            <li>
-              <a class="js-selected-navigation-item HeaderNavlink px-2" data-hotkey="g p" data-ga-click="Header, click, Nav menu - item:pulls context:user" aria-label="Pull requests you created" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls" href="/pulls">
-                Pull requests
-</a>            </li>
-            <li>
-              <a class="js-selected-navigation-item HeaderNavlink px-2" data-hotkey="g i" data-ga-click="Header, click, Nav menu - item:issues context:user" aria-label="Issues you created" data-selected-links="/issues /issues/assigned /issues/mentioned /issues" href="/issues">
-                Issues
-</a>            </li>
-              <li>
-                <a class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:marketplace context:user" data-octo-click="marketplace_click" data-octo-dimensions="location:nav_bar" data-selected-links=" /marketplace" href="/marketplace">
-                   Marketplace
-</a>              </li>
-            <li>
-              <a class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore" href="/explore">
-                Explore
-</a>            </li>
-          </ul>
-      </div>
-
-      <div class="d-flex">
-        
-<ul class="user-nav d-flex flex-items-center list-style-none" id="user-links">
-  <li class="dropdown">
-    <span class="d-inline-block  px-2">
-      
-    <a aria-label="You have no unread notifications" class="notification-indicator tooltipped tooltipped-s  js-socket-channel js-notification-indicator" data-hotkey="g n" data-ga-click="Header, go to notifications, icon:read" data-channel="notification-changed:7225430" href="/notifications">
-        <span class="mail-status "></span>
-        <svg class="octicon octicon-bell" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M13.99 11.991v1H0v-1l.73-.58c.769-.769.809-2.547 1.189-4.416.77-3.767 4.077-4.996 4.077-4.996 0-.55.45-1 .999-1 .55 0 1 .45 1 1 0 0 3.387 1.229 4.156 4.996.38 1.879.42 3.657 1.19 4.417l.659.58h-.01zM6.995 15.99c1.11 0 1.999-.89 1.999-1.999H4.996c0 1.11.89 1.999 1.999 1.999z"/></svg>
-</a>
-    </span>
-  </li>
-
-  <li class="dropdown">
-    <details class="details-overlay details-reset js-dropdown-details d-flex px-2 flex-items-center">
-      <summary class="HeaderNavlink"
-         aria-label="Create new…"
-         data-ga-click="Header, create new, icon:add">
-        <svg class="octicon octicon-plus float-left mr-1 mt-1" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"/></svg>
-        <span class="dropdown-caret mt-1"></span>
-      </summary>
-
-      <ul class="dropdown-menu dropdown-menu-sw">
-        
-<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
-  New repository
-</a>
-
-  <a class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
-    Import repository
-  </a>
-
-<a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
-  New gist
-</a>
-
-  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
-    New organization
-  </a>
-
-
-
-  <div class="dropdown-divider"></div>
-  <div class="dropdown-header">
-    <span title="semdogan/reproducible_research">This repository</span>
-  </div>
-    <a class="dropdown-item" href="/semdogan/reproducible_research/issues/new" data-ga-click="Header, create new issue">
-      New issue
-    </a>
-
-      </ul>
-    </details>
-  </li>
-
-  <li class="dropdown">
-
-    <details class="details-overlay details-reset js-dropdown-details d-flex pl-2 flex-items-center">
-      <summary class="HeaderNavlink name mt-1"
-        aria-label="View profile and more"
-        data-ga-click="Header, show menu, icon:avatar">
-        <img alt="@karthikmca39" class="avatar float-left mr-1" src="https://avatars0.githubusercontent.com/u/7225430?s=40&amp;v=4" height="20" width="20">
-        <span class="dropdown-caret"></span>
-      </summary>
-
-      <ul class="dropdown-menu dropdown-menu-sw">
-        <li class="dropdown-header header-nav-current-user css-truncate">
-          Signed in as <strong class="css-truncate-target">karthikmca39</strong>
-        </li>
-
-        <li class="dropdown-divider"></li>
-
-        <li><a class="dropdown-item" href="/karthikmca39" data-ga-click="Header, go to profile, text:your profile">
-          Your profile
-        </a></li>
-        <li><a class="dropdown-item" href="/karthikmca39?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">
-          Your stars
-        </a></li>
-          <li><a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, your gists, text:your gists">Your gists</a></li>
-
-        <li class="dropdown-divider"></li>
-
-        <li><a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
-          Help
-        </a></li>
-
-        <li><a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
-          Settings
-        </a></li>
-
-        <li><!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="TNKuM6dZXmZBbj+8Yqnjnu8JxgWfS0M8MZq9Zzy1U37cZdPqAjCvcZ3Ve+shphm8v8rxXoNi4Kzwg/hHpBA9ww==" />
-          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
-            Sign out
-          </button>
-        </form></li>
-      </ul>
-    </details>
-  </li>
-</ul>
-
-
-
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="qkaFhpLhPYVU/UYmhkI4wkh4w2Jsm0kJCV1zdl/59/k68fhfN4jMkohGAnHFTcLgGLv0OXCy6pnIRDZWx1yZRA==" />
-          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
-            Sign out
-          </button>
-</form>      </div>
-    </div>
-  </div>
-</header>
-
-      
-
-  </div>
-
-  <div id="start-of-content" class="show-on-focus"></div>
-
-    <div id="js-flash-container">
-</div>
-
-
-
-  <div role="main" class="application-main ">
-        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
-    <div id="js-repo-pjax-container" data-pjax-container >
-      
-
-
-
-
-
-
-
-  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
-    <div class="repohead-details-container clearfix container">
-
-      <ul class="pagehead-actions">
-  <li>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-autosubmit="true" data-remote="true" class="js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="T7CaF4BILLqzshE+zGrR0rWbgH994hX8XNXO4+4Om5Dy/lQpNnDEcmjOIrycOmG/hywIOwoBgI0cf/MQ9H5Yig==" />      <input type="hidden" name="repository_id" id="repository_id" value="139239045" class="form-control" />
-
-        <div class="select-menu js-menu-container js-select-menu">
-          <a href="/semdogan/reproducible_research/subscription"
-            class="btn btn-sm btn-with-count select-menu-button js-menu-target"
-            role="button"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-label="Toggle repository notifications menu"
-            data-ga-click="Repository, click Watch settings, action:blob#show">
-            <span class="js-select-button">
-                <svg class="octicon octicon-eye" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
-                Watch
-            </span>
-          </a>
-          <a class="social-count js-social-count"
-            href="/semdogan/reproducible_research/watchers"
-            aria-label="1 user is watching this repository">
-            1
-          </a>
-
-        <div class="select-menu-modal-holder">
-          <div class="select-menu-modal subscription-menu-modal js-menu-content">
-            <div class="select-menu-header js-navigation-enable" tabindex="-1">
-              <svg class="octicon octicon-x js-menu-close" role="img" aria-label="Close" viewBox="0 0 12 16" version="1.1" width="12" height="16"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
-              <span class="select-menu-title">Notifications</span>
-            </div>
-
-              <div class="select-menu-list js-navigation-container" role="menu">
-
-                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
-                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
-                  <div class="select-menu-item-text">
-                    <input type="radio" name="do" id="do_included" value="included" checked="checked" />
-                    <span class="select-menu-item-heading">Not watching</span>
-                    <span class="description">Be notified when participating or @mentioned.</span>
-                    <span class="js-select-button-text hidden-select-button-text">
-                      <svg class="octicon octicon-eye" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
-                      Watch
-                    </span>
-                  </div>
-                </div>
-
-                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
-                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
-                  <div class="select-menu-item-text">
-                    <input type="radio" name="do" id="do_subscribed" value="subscribed" />
-                    <span class="select-menu-item-heading">Watching</span>
-                    <span class="description">Be notified of all conversations.</span>
-                    <span class="js-select-button-text hidden-select-button-text">
-                      <svg class="octicon octicon-eye" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
-                        Unwatch
-                    </span>
-                  </div>
-                </div>
-
-                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
-                  <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
-                  <div class="select-menu-item-text">
-                    <input type="radio" name="do" id="do_ignore" value="ignore" />
-                    <span class="select-menu-item-heading">Ignoring</span>
-                    <span class="description">Never be notified.</span>
-                    <span class="js-select-button-text hidden-select-button-text">
-                      <svg class="octicon octicon-mute" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"/></svg>
-                        Stop ignoring
-                    </span>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-</form>
-  </li>
-
-  <li>
-    
-  <div class="js-toggler-container js-social-container starring-container ">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/semdogan/reproducible_research/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="nBNlXG1+u/E+YCIlWkMG156MEPQnXn4iPcsa/unmrq1y2LeTGS8EAuPcdj5w1wilg91fMDKH6pPxmH8ED+dSMw==" />
-      <input type="hidden" name="context" value="repository"></input>
-      <button
-        type="submit"
-        class="btn btn-sm btn-with-count js-toggler-target"
-        aria-label="Unstar this repository" title="Unstar semdogan/reproducible_research"
-        data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">
-        <svg class="octicon octicon-star" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
-        Unstar
-      </button>
-        <a class="social-count js-social-count" href="/semdogan/reproducible_research/stargazers"
-           aria-label="0 users starred this repository">
-          0
-        </a>
-</form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/semdogan/reproducible_research/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="+d9k9o0zl5c/CQG7ssD8OsOLbN/8iS5aOBb+vf6GMzrReRTvB+NhyC2Mjsebuyv41/yVfmkED76+iMMNywltlg==" />
-      <input type="hidden" name="context" value="repository"></input>
-      <button
-        type="submit"
-        class="btn btn-sm btn-with-count js-toggler-target"
-        aria-label="Star this repository" title="Star semdogan/reproducible_research"
-        data-ga-click="Repository, click star button, action:blob#show; text:Star">
-        <svg class="octicon octicon-star" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
-        Star
-      </button>
-        <a class="social-count js-social-count" href="/semdogan/reproducible_research/stargazers"
-           aria-label="0 users starred this repository">
-          0
-        </a>
-</form>  </div>
-
-  </li>
-
-  <li>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/semdogan/reproducible_research/fork" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="RnScdV95E6GUhIVYdQcdLCOUISCtYxEaH6xgnXDzjhS5T35hG6tyC9EZfNHuQh/h7aZvKKTTwdkedeF5PvQB9Q==" />
-            <button
-                type="submit"
-                class="btn btn-sm btn-with-count"
-                data-ga-click="Repository, show fork modal, action:blob#show; text:Fork"
-                title="Fork your own copy of semdogan/reproducible_research to your account"
-                aria-label="Fork your own copy of semdogan/reproducible_research to your account">
-              <svg class="octicon octicon-repo-forked" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
-              Fork
-            </button>
-</form>
-    <a href="/semdogan/reproducible_research/network" class="social-count"
-       aria-label="0 users forked this repository">
-      0
-    </a>
-  </li>
-</ul>
-
-      <h1 class="public ">
-  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
-  <span class="author" itemprop="author"><a class="url fn" rel="author" href="/semdogan">semdogan</a></span><!--
---><span class="path-divider">/</span><!--
---><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="/semdogan/reproducible_research">reproducible_research</a></strong>
-
-</h1>
-
-    </div>
-    
-<nav class="reponav js-repo-nav js-sidenav-container-pjax container"
-     itemscope
-     itemtype="http://schema.org/BreadcrumbList"
-     role="navigation"
-     data-pjax="#js-repo-pjax-container">
-
-  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /semdogan/reproducible_research" href="/semdogan/reproducible_research">
-      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
-      <span itemprop="name">Code</span>
-      <meta itemprop="position" content="1">
-</a>  </span>
-
-    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /semdogan/reproducible_research/issues" href="/semdogan/reproducible_research/issues">
-        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
-        <span itemprop="name">Issues</span>
-        <span class="Counter">0</span>
-        <meta itemprop="position" content="2">
-</a>    </span>
-
-  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /semdogan/reproducible_research/pulls" href="/semdogan/reproducible_research/pulls">
-      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
-      <span itemprop="name">Pull requests</span>
-      <span class="Counter">0</span>
-      <meta itemprop="position" content="3">
-</a>  </span>
-
-    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /semdogan/reproducible_research/projects" href="/semdogan/reproducible_research/projects">
-      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
-      Projects
-      <span class="Counter" >0</span>
-</a>
-    <a class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /semdogan/reproducible_research/wiki" href="/semdogan/reproducible_research/wiki">
-      <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
-      Wiki
-</a>
-
-  <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse /semdogan/reproducible_research/pulse" href="/semdogan/reproducible_research/pulse">
-    <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
-    Insights
-</a>
-
-</nav>
-
-
-  </div>
-
-<div class="container new-discussion-timeline experiment-repo-nav  ">
-  <div class="repository-content ">
-
-    
-  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/semdogan/reproducible_research/blob/bbb3874a50b61582581aa7b3b5320df293c639c7/PA1_template.Rmd">Permalink</a>
-
-  <!-- blob contrib key: blob_contributors:v21:182a92ff1601f097d51f85544da5d7c7 -->
-
-  
-
-  <div class="file-navigation">
-    
-<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
-  <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
-    
-    type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
-      <i>Branch:</i>
-      <span class="js-select-button css-truncate-target">master</span>
-  </button>
-
-  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
-
-    <div class="select-menu-modal">
-      <div class="select-menu-header">
-        <svg class="octicon octicon-x js-menu-close" role="img" aria-label="Close" viewBox="0 0 12 16" version="1.1" width="12" height="16"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
-        <span class="select-menu-title">Switch branches/tags</span>
-      </div>
-
-      <div class="select-menu-filters">
-        <div class="select-menu-text-filter">
-          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
-        </div>
-        <div class="select-menu-tabs">
-          <ul>
-            <li class="select-menu-tab">
-              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
-            </li>
-            <li class="select-menu-tab">
-              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
-
-        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
-
-
-            <a class="select-menu-item js-navigation-item js-navigation-open selected"
-               href="/semdogan/reproducible_research/blob/master/PA1_template.Rmd"
-               data-name="master"
-               data-skip-pjax="true"
-               rel="nofollow">
-              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
-              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
-                master
-              </span>
-            </a>
-        </div>
-
-          <div class="select-menu-no-results">Nothing to show</div>
-      </div>
-
-      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
-        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
-
-
-        </div>
-
-        <div class="select-menu-no-results">Nothing to show</div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-    <div class="BtnGroup float-right">
-      <a href="/semdogan/reproducible_research/find/master"
-            class="js-pjax-capture-input btn btn-sm BtnGroup-item"
-            data-pjax
-            data-hotkey="t">
-        Find file
-      </a>
-      <clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item">
-        Copy path
-      </clipboard-copy>
-    </div>
-    <div id="blob-path" class="breadcrumb">
-      <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/semdogan/reproducible_research"><span>reproducible_research</span></a></span></span><span class="separator">/</span><strong class="final-path">PA1_template.Rmd</strong>
-    </div>
-  </div>
-
-
-  <include-fragment src="/semdogan/reproducible_research/contributors/master/PA1_template.Rmd" class="commit-tease commit-loader">
-    <div>
-      Fetching contributors&hellip;
-    </div>
-
-    <div class="commit-tease-contributors">
-        <img alt="" class="loader-loading float-left" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
-      <span class="loader-error">Cannot retrieve contributors at this time</span>
-    </div>
-</include-fragment>
-
-
-  <div class="file">
-    <div class="file-header">
-  <div class="file-actions">
-
-    <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/semdogan/reproducible_research/raw/master/PA1_template.Rmd">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/semdogan/reproducible_research/blame/master/PA1_template.Rmd">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/semdogan/reproducible_research/commits/master/PA1_template.Rmd">History</a>
-    </div>
-
-        <a class="btn-octicon tooltipped tooltipped-nw"
-           href="https://desktop.github.com"
-           aria-label="Open this file in GitHub Desktop"
-           data-ga-click="Repository, open with desktop, type:windows">
-            <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
-        </a>
-
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/semdogan/reproducible_research/edit/master/PA1_template.Rmd" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="X7bHG+id99Avu5BR3qCQuV9Vke4TdmKiqBAn1cCD2T2O4FmYL+eMK0/cnAAdbzDBZhU8ALoiihgI7cCtIh40gA==" />
-            <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
-              aria-label="Fork this project and edit the file" data-hotkey="e" data-disable-with>
-              <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
-            </button>
-</form>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/semdogan/reproducible_research/delete/master/PA1_template.Rmd" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ZKfu/sN8aT4JfK4UPfQ8CcQJQpgjvC4YbysN90bVjHfJsD7gw9xTjz0sjSotCYj+ojpqsg6t7gDPqD8oYXWhMw==" />
-          <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
-            aria-label="Fork this project and delete the file" data-disable-with>
-            <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
-          </button>
-</form>  </div>
-
-  <div class="file-info">
-      128 lines (72 sloc)
-      <span class="file-info-divider"></span>
-    4.86 KB
-  </div>
-</div>
-
-    
-  <div id="readme" class="readme blob instapaper_body">
-    <article class="markdown-body entry-content" itemprop="text"><table data-table-type="yaml-metadata">
-  <thead>
-  <tr>
-  <th>title</th>
-  <th>output</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td><div>Coursera Reproducible research course Project 1</div></td>
-  <td><div>html_document</div></td>
-  </tr>
-  </tbody>
-</table>
-
-<pre lang="{r"><code>library(Hmisc)
-library(plyr) 
-library(lattice)
-</code></pre>
-<h2><a id="user-content-download-files" class="anchor" aria-hidden="true" href="#download-files"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download files</h2>
-<ol>
-<li>
-<p>Load the data (i.e. read.csv())</p>
-</li>
-<li>
-<p>Process/transform the data (if necessary) into a format suitable for your analysis</p>
-</li>
-</ol>
-<pre lang="{r"><code>
-if(!file.exists(".data5")){dir.create("./data5")}
-fileUrl &lt;- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
-download.file(fileUrl,destfile="./data5/drepdata%2Fdata%2Factivity.zip",method="curl")
-unzip(zipfile="./data5/drepdata%2Fdata%2Factivity.zip",exdir="./data5")
-
-activity &lt;- read.csv("./data5/activity.csv")
-</code></pre>
-<h2><a id="user-content-what-is-mean-total-number-of-steps-taken-per-day" class="anchor" aria-hidden="true" href="#what-is-mean-total-number-of-steps-taken-per-day"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is mean total number of steps taken per day?</h2>
-<p>For this part of the assignment, you can ignore the missing values in the dataset.</p>
-<ol>
-<li>
-<p>Calculate the total number of steps taken per day</p>
-</li>
-<li>
-<p>If you do not understand the difference between a histogram and a barplot, research the difference between them. Make a histogram of the total number of steps taken each day</p>
-</li>
-<li>
-<p>Calculate and report the mean and median of the total number of steps taken per day</p>
-</li>
-</ol>
-<pre lang="{r,"><code>
-activity$date &lt;- as.Date(activity$date)
-
-totalStepsPerDay &lt;-aggregate(steps~date, activity, sum, na.rm=TRUE)
-
-hist(totalStepsPerDay$steps, col="red", xlab="Total Steps by Date",main="Histogram of Total Steps by Date")
-
-
-mean(totalStepsPerDay$steps)
-median(totalStepsPerDay$steps)
-</code></pre>
-<h2><a id="user-content-what-is-the-average-daily-activity-pattern" class="anchor" aria-hidden="true" href="#what-is-the-average-daily-activity-pattern"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is the average daily activity pattern?</h2>
-<ol>
-<li>
-<p>Make a time series plot (i.e. type="l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)</p>
-</li>
-<li>
-<p>Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?</p>
-</li>
-</ol>
-<pre lang="{r,"><code>five.min.int &lt;- aggregate(steps ~ interval, data = activity, FUN = mean, na.rm = TRUE)
-
-
-plot(x = five.min.int$interval, 
-     y = five.min.int$steps, 
-     type = "l", 
-     col = "red",
-     xlab = "Time (5-minute interval)",
-     ylab = "Average Steps Taken Per Day",
-     main = "Average daily activity pattern")
-</code></pre>
-<h2><a id="user-content-imputing-missing-values" class="anchor" aria-hidden="true" href="#imputing-missing-values"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Imputing missing values</h2>
-<p>Note that there are a number of days/intervals where there are missing values (coded as NA). The presence of missing days may introduce bias into some calculations or summaries of the data.</p>
-<ol>
-<li>
-<p>Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NA)</p>
-</li>
-<li>
-<p>Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.</p>
-</li>
-<li>
-<p>Create a new dataset that is equal to the original dataset but with the missing data filled in.</p>
-</li>
-<li>
-<p>Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?</p>
-</li>
-</ol>
-<pre lang="{r,"><code>
-totalNA &lt;- sum(is.na(activity$steps))
-
-activity.imputed &lt;- ddply(activity, "interval", mutate, imputed.steps = impute(steps, mean))
-
-totalStepsPerDay2 &lt;-aggregate(imputed.steps~date, activity.imputed, sum)
-
-hist(totalStepsPerDay2$imputed.steps, col="blue", xlab="Total Steps by Date",main="Histogram of Total Steps by Date")
-
-mean(totalStepsPerDay2$imputed.steps)
-median(totalStepsPerDay2$imputed.steps)
-
-
-</code></pre>
-<p>Imputing missing data on the estimates of the total daily number of steps had very limited effect.
-Mean is the same (10766.19).
-There is a slight increase in the median (10766.19 vs 10765).</p>
-<h2><a id="user-content-are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="anchor" aria-hidden="true" href="#are-there-differences-in-activity-patterns-between-weekdays-and-weekends"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Are there differences in activity patterns between weekdays and weekends?</h2>
-<p>For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part.</p>
-<ol>
-<li>Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.</li>
-</ol>
-<p>2.Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.</p>
-<pre lang="{r,"><code>
-activity.imputed$weekend_weekday &lt;- weekdays(activity.imputed$date)
-
-activity.imputed$WED &lt;- ifelse(activity.imputed$weekend_weekday == "Samedi" | activity.imputed$weekend_weekday == "Dimanche", "weekend", "weekday")
-activity.imputed$WED &lt;- as.factor(activity.imputed$WED)
-
-steps_interval &lt;- aggregate(imputed.steps ~ interval + WED, activity.imputed, mean)
-
-xyplot(steps_interval$imputed.steps ~ steps_interval$interval | steps_interval$WED, main="Weekdays and weekend pattern",xlab="Interval", ylab="Steps",layout=c(1,2), type="l")
-
-</code></pre>
-</article>
-  </div>
-
-  </div>
-
-  <button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="d-none">Jump to Line</button>
-  <div id="jump-to-line" style="display:none">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-      <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
-      <button type="submit" class="btn">Go</button>
-</form>  </div>
-
-
-  </div>
-  <div class="modal-backdrop js-touch-events"></div>
-</div>
-
-    </div>
-  </div>
-
-  </div>
-
-      
-<div class="footer container-lg px-3" role="contentinfo">
-  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
-    <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.36872s from unicorn-1401964241-5qq3d">GitHub</span>, Inc.</li>
-        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
-        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
-        <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
-        <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
-        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
-    </ul>
-
-    <a aria-label="Homepage" title="GitHub" class="footer-octicon" href="https://github.com">
-      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-</a>
-   <ul class="list-style-none d-flex flex-wrap ">
-        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
-      <li class="mr-3"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
-      <li class="mr-3"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
-      <li class="mr-3"><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
-        <li class="mr-3"><a href="https://blog.github.com" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
-        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
-
-    </ul>
-  </div>
-  <div class="d-flex flex-justify-center pb-6">
-    <span class="f6 text-gray-light"></span>
-  </div>
-</div>
-
-
-
-  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
-    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
-    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
-      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
-    </button>
-    You can’t perform that action at this time.
-  </div>
-
-
-    
-    <script crossorigin="anonymous" integrity="sha512-LB1tzJRQ5uPC9BeR2Mb4TOIBPBxMXSM2p2+WgU7lLEdqAe7TptfwpDfDqfAnWlC2aw7FoJcKQxqDyjulVPpIbw==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-ad697dde9ac7f691157024c54b447026.js"></script>
-    
-    <script crossorigin="anonymous" async="async" integrity="sha512-Tqd1j3zgJYL8NSjEw4UYqRS4kQ09vPAu4KWouT3+gnnt5Mupx/Ps2ZM/CdF6oa1L0dw+vxRHaAkgkpcahIX40g==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-e10f06304c6b9fd853406284acc0fe0a.js"></script>
-    
-    
-    
-  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
-    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
-    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
-    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
-  </div>
-  <div class="facebox" id="facebox" style="display:none;">
-  <div class="facebox-popup">
-    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
-    </div>
-    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
-      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
-    </button>
-  </div>
-</div>
-
-  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
-  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
-  </div>
-</div>
-
-<div id="hovercard-aria-description" class="sr-only">
-  Press h to open a hovercard with more details.
-</div>
-
-
-  </body>
-</html>
-
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+library(plyr)
+RAW_DATA_ARCHIVE <- './activity.zip'
+DATA_DIR <- './data'
+```
+
+
+## Loading and preprocessing the data
+<!---
+### Reading in the data
+-->
+We begin by extracting the raw text file from the zip archive.
+
+```{r unzip}
+if (!file.exists(DATA_DIR)) dir.create(DATA_DIR)
+if (!file.exists(file.path(DATA_DIR, 'activity.csv'))) {
+  unzip(RAW_DATA_ARCHIVE, exdir=DATA_DIR)
+}
+```
+
+We then read in the data using ``read.csv`` with default settings.
+
+```{r read_data}
+data <- tibble::as.tibble(read.csv(file.path(DATA_DIR, 'activity.csv')))
+```
+
+After reading in the data we inspect the first few rows in the data set.
+
+```{r check_first_rows}
+print(data)
+```
+
+We can see that the date column has been read in as a factor, so we convert its
+values into proper ``Date`` objects.
+
+```{r convert_dates, message=FALSE}
+library(dplyr)
+library(lubridate)
+data <- mutate(data, date = ymd(date))
+class(data$date)
+```
+
+## What is the mean total number of steps taken per day?
+
+In order to answer this question, we begin by calculating the total daily
+steps through a summation over each day's 5-minute intervals. We choose to
+ignore missing values for now as their influence on the analysis'
+results will be examined in a later section.
+
+```{r total_steps_without_nas}
+total_daily_steps <- with(data, tapply(steps, date, sum, na.rm = TRUE))
+```
+
+It is now straightforward to plot a histogram to examine the results visually.
+
+```{r hist_without_nas_baseplot, eval=FALSE, echo=FALSE}
+  hist(total_daily_steps, xlab='Total daily steps', 
+                          main='Histogram of total daily steps')
+```
+
+```{r hist_without_nas}
+library(ggplot2)
+ggplot(data=data.frame(total_daily_steps), aes(x=total_daily_steps)) +
+  geom_histogram(binwidth=5000, center=5000/2, aes(col=I("white"))) +
+  labs(title='Histogram of total daily steps', x='Total daily steps') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+Here we calculate the mean and median of the total number of steps per day.
+
+```{r mean_and_median_without_nas}
+c(mean=mean(total_daily_steps), median=median(total_daily_steps))
+```
+
+
+## What is the average daily activity pattern?
+
+To visualize the average daily activity pattern we must first compute the
+average number of steps per 5-minute interval across all days.
+
+```{r compute_average_daily_pattern}
+avg_daily_activity <- {data %>%
+                       group_by(interval) %>%
+                       summarise(avg_steps=mean(steps, na.rm = TRUE))}
+head(avg_daily_activity)
+```
+
+We can now use the data computed in the previous step to build the desired
+time-series plot.
+
+```{r plot_daily_activity_pattern}
+ggplot(avg_daily_activity, aes(x=interval, y=avg_steps)) + geom_line() +
+  labs(title='Average Daily Activity Pattern') +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(y = 'Number of steps')
+```
+
+From the plot above, it can be seen that the 5-minute interval that contains
+the most steps (on average) must be close to, but less than 875. We can 
+confirm this programmatically as follows:
+
+```{r get_interval_max_steps}
+avg_daily_activity[which.max(avg_daily_activity$avg_steps), 'interval'][[1]]
+```
+
+## Imputing missing values
+
+The presence of missing days may introduce bias into some calculations or
+summaries of the data, so we will assess this risk by first checking the total
+number of missing values in the data set.
+
+```{r count_missing_values}
+sum(is.na(data$steps))
+```
+
+While the number of missing values in the data set seems to be significant
+(`r sum(is.na(data$steps))`), we will be more rigorous and
+compute what proportion of the observations is missing.
+
+```{r proportion_missing_values}
+mean(is.na(data$steps))
+```
+
+Because the proportion of missing values is indeed significant
+(`r round(100 * mean(is.na(data$steps)), digits=2)`%), we will impute them using
+the mean number of steps per 5-minute interval, i.e., the data previously used
+to build the daily activity pattern ``avg_daily_activity``.
+
+Next, we use the imputation strategy described above to create a new data set
+``data_imp`` that is equal to the original data set but with the missing data
+filled in.
+
+```{r build_imputed_dataset}
+library(plyr)
+data_imp <- join(data, avg_daily_activity, by = 'interval')
+na_rows <- is.na(data_imp$steps)
+data_imp[na_rows, ]$steps <- data_imp[na_rows,]$avg_steps
+data_imp <- subset(data_imp, select = -avg_steps)
+head(data_imp)
+```
+
+We now use the imputed data set to rebuild the histogram of total daily steps. 
+
+```{r hist_imputed_baseplot, eval=FALSE, echo=FALSE}
+hist(with(data_imp, tapply(steps, date, sum)),
+     xlab='Total daily steps', 
+     main='Histogram of total daily steps (with imputation)')
+```
+```{r hist_imputed}
+total_daily_steps_imp <- with(data_imp, tapply(steps, date, sum))
+ggplot(data=data.frame(total_daily_steps_imp), aes(x=total_daily_steps_imp)) +
+  geom_histogram(binwidth=5000, center=5000/2, aes(col=I("white"))) +
+  labs(title='Histogram of total daily steps (with imputation)', 
+       x='Total daily steps') +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+Comparing the histogram above with the one obtained previously, we can see that
+imputation yields a more symmetrical and Gaussian-like distribution for the
+total daily steps. This observation suggests that the strategy used earlier for
+handling missing values may have caused the estimates of the total daily number
+of steps to be biased towards zero. 
+
+Finally, we compute the mean and median total number of daily steps from the
+imputed data and compare them with the estimates obtained in the first part
+of the assignment.
+
+```{r mean_and_median_imputation_comparison}
+imputed<-c(mean=mean(total_daily_steps_imp), median=median(total_daily_steps_imp))
+original<-c(mean=mean(total_daily_steps), median=median(total_daily_steps))
+rbind(imputed, original)
+```
+
+From the table above, we see that both the mean and median estimates computed
+from the imputed data are greater than those obtained without imputation.
+Moreover, we can also see that the mean and median values are now identical,
+which supports the observation that the distribution looks more symmetric.
+
+## Are there differences in activity patterns between weekdays and weekends?
+
+We begin by extending the dataset with a new factor variable ``day_type`` with
+two levels - "weekday" and "weekend" - indicating whether a given date is a
+weekday or weekend day.
+
+```{r create_new_factor}
+data_imp$day_type <- weekdays(data_imp$date, TRUE) %in% c('Sat','Sun')
+data_imp$day_type <- factor(data_imp$day_type,
+                            labels=c('FALSE'='weekday', 'TRUE'='weekend'))
+head(data_imp)
+```
+
+Next, we use the ``day_type`` factor to build a panel plot containing the
+average daily activity patterns for weekdays and weekends.
+
+```{r panel_plot_weekdays_vs_weekends}
+avg_daily_activity_day_type <- {data_imp %>%
+                                group_by(interval, day_type) %>%
+                                summarise(steps=mean(steps))}
+g <- ggplot(avg_daily_activity_day_type, aes(x=interval, y=steps)) + geom_line()
+g <- g + facet_grid(day_type ~ .)
+g <- g + labs(title='Average Daily Activity Patterns for Weekdays and Weekends') +
+         theme(plot.title = element_text(hjust = 0.5))
+g <- g + labs(y = 'Number of steps')
+print(g)
+```
+
+From the plot above, we can see that there are noticeable differences between
+the activity patterns for weekdays and weekends.
